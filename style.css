@@ -85,7 +85,7 @@ section {
 }
 
 .subscribe .main-img {
-  transform: translateY(1px);
+  transform: translateY(15%);
 }
 
 .subscribe .subscribe-title {
