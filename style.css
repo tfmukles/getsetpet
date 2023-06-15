@@ -12,7 +12,13 @@ img {
 }
 
 section {
-  padding-block: 100px;
+  padding-block: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  section {
+    padding-block: 100px;
+  }
 }
 
 .has-gradient {
@@ -293,34 +299,72 @@ section {
 }
 
 .faq {
-  padding: 78px 0 !important;
+  padding: 55px 0 !important;
   background-color: #e6e7e8;
   background-image: url("/img/bg.png");
   background-repeat: no-repeat;
   position: relative;
 }
 
-.faq .faq-left .rabbit {
-  transform: translateY(-8%);
-  position: absolute;
-  top: 0;
+.faq .faq-left {
+  text-align: center;
+}
+
+.faq .faq-left img {
+  width: 221px;
+  height: 220.87px;
+}
+
+@media only screen and (min-width: 576px) {
+  .faq .faq-left img {
+    width: auto;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .faq .faq-left {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .faq .faq-left {
+    margin-top: -90px;
+  }
 }
 
 .faq .faq-right h3 {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 54px;
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 16px;
   text-align: center;
   color: #1c75ba;
 }
 
+@media only screen and (min-width: 576px) {
+  .faq .faq-right h3 {
+    margin-top: 16px;
+    font-size: 36px;
+    line-height: 54px;
+  }
+}
+
 .faq .faq-right h5 {
-  font-size: 28px;
-  line-height: 42px;
+  font-size: 10px;
+  line-height: 15px;
   font-weight: 400;
   color: #1c75ba;
   text-align: center;
-  margin-bottom: 36px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 576px) {
+  .faq .faq-right h5 {
+    font-size: 28px;
+    line-height: 42px;
+  }
 }
 
 .faq .faq-right .faq-cards > *:nth-child(2) h2 {
@@ -339,12 +383,45 @@ section {
   background: #8e7aac;
 }
 
+.faq .faq-right .faq-card {
+  display: flex;
+  max-width: 120px;
+  margin: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .faq .faq-right .faq-card {
+    display: block;
+    max-width: 100%;
+  }
+}
+
+.faq .faq-right .faq-card img {
+  width: 12px;
+  height: 11px;
+}
+
+@media only screen and (min-width: 576px) {
+  .faq .faq-right .faq-card img {
+    width: auto;
+    height: auto;
+  }
+}
+
 .faq .faq-right .faq-card h2 {
-  margin-block: 18px;
+  margin-inline: 10px;
   color: #e75184;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+@media only screen and (min-width: 576px) {
+  .faq .faq-right .faq-card h2 {
+    margin-block: 18px;
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .faq .faq-right .faq-card p {
@@ -413,7 +490,7 @@ footer .contribution-column p {
 }
 
 footer .learn-more-column button {
-  padding: 10px 48px;
+  padding: 10px 65px;
   color: #fff;
   border: none;
   font-weight: 700;
@@ -428,6 +505,7 @@ footer .learn-more-column button {
   footer .learn-more-column button {
     font-size: 18px;
     line-height: 27px;
+    padding: 10px 48px;
   }
 }
 
@@ -554,4 +632,14 @@ footer .copywrite {
   padding-bottom: 16px;
   font-size: 8px;
   line-height: 12px;
+}
+
+@media only screen and (max-width: 575px) {
+  .has-border > * > * {
+    padding-block: 32px;
+  }
+
+  .has-border > *:not(:last-child) > * {
+    border-bottom: 1px solid #fff;
+  }
 }
