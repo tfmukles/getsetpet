@@ -644,8 +644,36 @@ footer .copywrite {
   }
 }
 
+.product-slider-section h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #6eafde;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+@media only screen and (min-width: 576px) {
+  .product-slider-section h2 {
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 24px;
+  }
+}
+
 .batch {
   height: 70px;
+}
+
+.batch + img {
+  object-fit: contain;
+  height: 80px;
+}
+
+@media only screen and (min-width: 576px) {
+  .batch + img {
+    height: 100px;
+  }
 }
 
 .batch > div {
@@ -671,9 +699,6 @@ footer .copywrite {
 
 .batch > div:where(.best-seller) {
   background: #8e7aac;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .batch > div:where(.on-sale) {
@@ -691,7 +716,11 @@ footer .copywrite {
 
 .product {
   position: relative;
-  padding: 10px 24px;
+  padding-block: 10px;
+}
+
+.slick-track > *:where(.slick-active):last-child {
+  background-color: red !important;
 }
 
 .product-slider .slick-track > *:not(:last-child)::after {
@@ -727,7 +756,14 @@ footer .copywrite {
   line-height: 15px;
   color: #000;
   height: 25px;
-  margin-top: 4px;
+  margin-block: 10px;
+  padding-inline: 24px;
+}
+
+@media only screen and (min-width: 576px) {
+  .product .product-size {
+    margin-block: 12px;
+  }
 }
 
 .product .product-size select {
@@ -858,7 +894,7 @@ footer .copywrite {
 .product-slider::before {
   content: "";
   position: absolute;
-  z-index: 20;
+  z-index: -10;
 }
 
 .product-slider::after {
@@ -883,7 +919,6 @@ footer .copywrite {
   height: 100%;
   background-image: url(img/slider-left-wing.png);
   background-repeat: no-repeat;
-  z-index: 99999999;
   background-size: contain;
   background-position: left;
 }
